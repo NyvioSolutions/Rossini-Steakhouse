@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <meta
+      name="description"
+      content="Viva a experiência Rossini Steakhouse em São Luís. Rodízio, cortes nobres, buffet e sushi. Conheça a casa e solicite sua reserva."
+    />
+    <meta
+      name="theme-color"
+      content="#20251f"
+    />
+    <title>Rossini Steakhouse | O sabor dos bons momentos</title>
+    <link
+      rel="icon"
+      href="favicon.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+    <script
+      src="script.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <a
+      class="skip-link"
+      href="#conteudo"
+      >Ir para o conteúdo</a
+    >
+    <header class="header">
+      <div class="container header-inner">
+        <a
+          class="brand"
+          href="#inicio"
+          aria-label="Rossini Steakhouse — Início"
+          ><span>ROSSINI<span class="brand-dot">.</span></span
+          ><small>STEAKHOUSE</small></a
+        >
+        <button
+          class="menu-toggle"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="navigation"
+        >
+          <span></span><span></span>
+        </button>
+        <nav
+          id="navigation"
+          aria-label="Navegação principal"
+        >
+          <a
+            href="#inicio"
+            class="active"
+            >Início</a
+          ><a href="#cardapio">Sabores</a><a href="#experiencia">Experiência</a
+          ><a href="#localizacao">Localização</a><a href="#contato">Contato</a>
+        </nav>
+        <a
+          class="button button-gold header-cta whatsapp"
+          href="https://wa.me/559833033769"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span aria-hidden="true">↗</span> Reserve sua mesa</a
+        >
+      </div>
+    </header>
+    <main id="conteudo">
+      <section
+        class="hero"
+        id="inicio"
+        aria-labelledby="hero-title"
+      >
+        <img
+          class="hero-image"
+          src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=2400&q=85"
+          alt="Carne preparada na brasa — fotografia ilustrativa"
+          width="2400"
+          height="1600"
+          fetchpriority="high"
+        />
+        <div class="hero-shade"></div>
+        <div class="container hero-content">
+          <p class="eyebrow"><span></span> ROSSINI STEAKHOUSE · SÃO LUÍS</p>
+          <h1 id="hero-title">O sabor de<br />estar <em>junto.</em></h1>
+          <p class="hero-description">
+            Rodízio, cortes na brasa e cozinha japonesa.<br />O melhor da nossa casa, à
+            sua mesa.
+          </p>
+          <div class="hero-actions">
+            <a
+              href="#contato"
+              class="button button-gold"
+              >Reserve sua mesa <span aria-hidden="true">↗</span></a
+            ><a
+              href="#cardapio"
+              class="hero-secondary"
+              >Explorar sabores <span aria-hidden="true">↓</span></a
+            >
+          </div>
+        </div>
+        <div class="container hero-bottom">
+          <p>BOA COMIDA. BOA COMPANHIA.</p>
+          <div class="hero-seal">
+            <span aria-hidden="true">✳</span>
+            <p>Da brasa à mesa.<br /><em>Com cuidado, sempre.</em></p>
+          </div>
+        </div>
+      </section>
+      <aside
+        class="visit-strip"
+        aria-label="Planeje sua visita"
+      >
+        <div class="container visit-grid">
+          <div>
+            <span
+              class="visit-icon"
+              aria-hidden="true"
+              >☼</span
+            >
+            <p>
+              <strong>Almoço sem pressa</strong
+              ><span>Terça a domingo · 11h15 às 15h</span>
+            </p>
+          </div>
+          <div>
+            <span
+              class="visit-icon"
+              aria-hidden="true"
+              >☾</span
+            >
+            <p>
+              <strong>Uma noite especial</strong
+              ><span>Terça a sábado · 18h15 às 23h</span>
+            </p>
+          </div>
+          <a href="#localizacao"
+            ><span
+              class="visit-icon"
+              aria-hidden="true"
+              >⌖</span
+            >
+            <p>
+              <strong>Esperamos você no Calhau</strong
+              ><span>Galeria Mall · São Luís, MA</span>
+            </p>
+            <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </aside>
+      <section
+        id="cardapio"
+        class="menu-section section-light"
+      >
+        <div class="container">
+          <div class="section-heading reveal">
+            <div>
+              <p class="eyebrow">PARA TODOS OS PALADARES</p>
+              <h2>Da brasa ao <em>seu gosto.</em></h2>
+            </div>
+            <p>
+              Cortes, frescor e um toque doce.<br />Encontre seu jeito de saborear a
+              Rossini.
+            </p>
+          </div>
+          <div
+            class="filters"
+            role="group"
+            aria-label="Explorar categorias de sabores"
+          >
+            <button
+              class="active"
+              data-filter="all"
+              aria-pressed="true"
+            >
+              Todos os sabores</button
+            ><button
+              data-filter="cortes"
+              aria-pressed="false"
+            >
+              Cortes nobres</button
+            ><button
+              data-filter="buffet"
+              aria-pressed="false"
+            >
+              Buffet & sushi</button
+            ><button
+              data-filter="bebidas"
+              aria-pressed="false"
+            >
+              Bebidas & coquetéis</button
+            ><button
+              data-filter="sobremesas"
+              aria-pressed="false"
+            >
+              Sobremesas
+            </button>
+          </div>
+          <p
+            id="filter-status"
+            class="sr-only"
+            aria-live="polite"
+          ></p>
+          <div
+            id="menu-grid"
+            class="menu-grid"
+          ></div>
+          <p class="menu-note">
+            Uma amostra dos nossos sabores. Fotografias ilustrativas; opções sujeitas à
+            disponibilidade do dia.
+          </p>
+        </div>
+      </section>
+      <section
+        id="experiencia"
+        class="experience"
+      >
+        <div class="container experience-grid">
+          <div class="experience-photo reveal">
+            <img
+              data-image="interior"
+              alt="Ambiente de restaurante com iluminação acolhedora, imagem ilustrativa"
+              loading="lazy"
+              width="800"
+              height="960"
+            />
+            <div class="photo-caption">
+              <span>A arte de receber bem.</span><small>ESSÊNCIA ROSSINI</small>
+            </div>
+          </div>
+          <div class="experience-copy reveal">
+            <p class="eyebrow">O PRAZER DE RECEBER</p>
+            <h2>Mais que uma mesa.<br />Um <em>bom encontro.</em></h2>
+            <p>
+              Há momentos que merecem uma mesa especial. Na Rossini, o rodízio reúne
+              cortes selecionados, variedade no buffet e os sabores da cozinha japonesa em
+              uma experiência completa.
+            </p>
+            <p>
+              Para um almoço em família ou um jantar a dois, venha com tempo. O melhor é
+              saborear cada momento.
+            </p>
+            <div class="hours">
+              <div>
+                <span
+                  class="hour-icon"
+                  aria-hidden="true"
+                  >☼</span
+                >
+                <h3>Almoço</h3>
+                <p>Terça a domingo</p>
+                <strong>11h15 às 15h</strong>
+              </div>
+              <div>
+                <span
+                  class="hour-icon"
+                  aria-hidden="true"
+                  >☾</span
+                >
+                <h3>Jantar</h3>
+                <p>Terça a sábado</p>
+                <strong>18h15 às 23h</strong>
+              </div>
+            </div>
+            <a
+              class="text-link"
+              href="#contato"
+              >Viva esse momento <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+      <section
+        id="contato"
+        class="reservation section-light"
+      >
+        <div class="container reservation-grid">
+          <div class="reservation-copy reveal">
+            <p class="eyebrow">RESERVE SEU MOMENTO</p>
+            <h2>
+              A boa companhia<br />é por sua conta.<br /><em>A mesa é com a gente.</em>
+            </h2>
+            <p>
+              Um almoço em família, um jantar a dois ou uma celebração.<br />Comece
+              escolhendo quando nos visitar.
+            </p>
+            <div class="contact-box">
+              <span>Prefere falar com a nossa equipe?</span
+              ><a
+                class="button button-dark whatsapp"
+                href="https://wa.me/559833033769"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Reservar pelo WhatsApp <span aria-hidden="true">↗</span></a
+              ><a
+                class="phone"
+                href="tel:+559833033769"
+                >(98) 3303-3769</a
+              >
+            </div>
+          </div>
+          <form
+            id="reservation-form"
+            class="reservation-form reveal"
+            novalidate
+          >
+            <div class="form-heading">
+              <span
+                class="form-step"
+                aria-hidden="true"
+                >↗</span
+              >
+              <div>
+                <h3>Vamos guardar uma mesa?</h3>
+                <p>Preencha os dados e continue no WhatsApp.</p>
+              </div>
+            </div>
+            <div class="form-grid">
+              <div class="field full">
+                <label for="name">Seu nome</label
+                ><input
+                  id="name"
+                  name="name"
+                  autocomplete="name"
+                  placeholder="Como podemos chamar você?"
+                  required
+                  minlength="2"
+                  maxlength="100"
+                  aria-describedby="name-error"
+                /><small
+                  class="error"
+                  id="name-error"
+                ></small>
+              </div>
+              <div class="field full">
+                <label for="phone">Telefone / WhatsApp</label
+                ><input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  inputmode="tel"
+                  placeholder="(98) 99999-9999"
+                  maxlength="16"
+                  required
+                  aria-describedby="phone-error"
+                /><small
+                  class="error"
+                  id="phone-error"
+                ></small>
+              </div>
+              <div class="field">
+                <label for="date">Dia da visita</label
+                ><input
+                  id="date"
+                  name="date"
+                  type="date"
+                  required
+                  aria-describedby="date-error"
+                /><small
+                  class="error"
+                  id="date-error"
+                ></small>
+              </div>
+              <div class="field">
+                <label for="time">Horário desejado</label
+                ><select
+                  id="time"
+                  name="time"
+                  required
+                  aria-describedby="time-error"
+                >
+                  <option value="">Selecione a data</option></select
+                ><small
+                  class="error"
+                  id="time-error"
+                ></small>
+              </div>
+              <div class="field full">
+                <label for="people">Número de pessoas</label
+                ><select
+                  id="people"
+                  name="people"
+                  required
+                  aria-describedby="people-error"
+                >
+                  <option value="">Quantas pessoas vêm com você?</option>
+                  <option value="1">1 pessoa</option>
+                  <option value="2">2 pessoas</option>
+                  <option value="3">3 pessoas</option>
+                  <option value="4">4 pessoas</option>
+                  <option value="5">5 pessoas</option>
+                  <option value="6">6 pessoas</option>
+                  <option value="7">7 pessoas</option>
+                  <option value="8">8 pessoas</option>
+                  <option value="9">9 pessoas</option>
+                  <option value="10">10 pessoas</option>
+                  <option value="Mais de 10">Mais de 10 pessoas</option></select
+                ><small
+                  class="error"
+                  id="people-error"
+                ></small>
+              </div>
+            </div>
+            <button
+              class="button button-gold submit-button"
+              type="submit"
+            >
+              Continuar no WhatsApp <span aria-hidden="true">↗</span>
+            </button>
+            <p class="form-note">
+              Você será direcionado ao WhatsApp para enviar a solicitação. A reserva
+              depende da confirmação da nossa equipe.
+            </p>
+            <p
+              id="form-status"
+              role="status"
+            ></p>
+            <a
+              id="reservation-link"
+              class="text-link"
+              hidden
+              target="_blank"
+              rel="noopener noreferrer"
+              >Continuar no WhatsApp ↗</a
+            >
+          </form>
+        </div>
+      </section>
+      <section
+        id="localizacao"
+        class="location"
+      >
+        <div class="container location-grid">
+          <div class="reveal">
+            <p class="eyebrow">VENHA NOS VISITAR</p>
+            <h2>Seu destino.<br /><em>Nossa casa.</em></h2>
+            <p class="location-intro">
+              No Calhau, em São Luís. Um convite para sair da rotina e sentar à nossa
+              mesa.
+            </p>
+            <address>
+              Av. dos Holandeses, nº 01 — Galeria Mall<br />Calhau, São Luís — MA<br />CEP
+              65071-380
+            </address>
+            <a
+              class="text-link"
+              href="https://www.google.com/maps/search/?api=1&query=Rossini+Steakhouse+Galeria+Mall+Sao+Luis"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Traçar rota no Google Maps <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <iframe
+            title="Localização da Rossini Steakhouse no Google Maps"
+            src="https://maps.google.com/maps?q=Rossini%20Steakhouse%20Galeria%20Mall%20Sao%20Luis&t=&z=16&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+    </main>
+    <div class="mobile-reserve">
+      <a
+        href="#localizacao"
+        aria-label="Ver endereço e como chegar"
+        >Como chegar <span aria-hidden="true">↗</span></a
+      ><a
+        class="button button-gold"
+        href="#contato"
+        >Reservar mesa <span aria-hidden="true">↗</span></a
+      >
+    </div>
+    <footer>
+      <div class="container footer-inner">
+        <a
+          class="brand"
+          href="#inicio"
+          ><span>ROSSINI<span class="brand-dot">.</span></span
+          ><small>STEAKHOUSE</small></a
+        >
+        <p>O sabor dos bons momentos.</p>
+        <small>© <span id="year">2026</span> Rossini Steakhouse.</small
+        ><a
+          href="#inicio"
+          aria-label="Voltar ao início"
+          >↑</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
+
+
+
