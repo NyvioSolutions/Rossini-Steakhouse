@@ -1,0 +1,11 @@
+{
+  "name": "rossini-steakhouse",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node preview.cjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check script.js && node --check reservation.mjs && node --check preview.cjs"
+  }
+}

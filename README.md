@@ -1,33 +1,40 @@
-# Rossini Steakhouse — nova apresentação
+# Rossini Steakhouse
 
-Site em HTML, CSS e JavaScript puro, sem dependências de produção ou etapa de build.
+Site estático em HTML, CSS e JavaScript. Hero com foto real de cortes e movimento sutil; rodízio a partir de R$ 105; formulário sem telefone.
 
-## Visualizar
+## Abrir localmente
 
-Abra `index.html` no navegador. No VS Code, você também pode usar a extensão Live Server.
+Com Node.js instalado, execute nesta pasta:
 
-Com Node.js instalado, execute `node preview.cjs` nesta pasta e acesse http://127.0.0.1:4174.
+```sh
+node preview.cjs
+```
 
-## O que mudou
+Abra http://127.0.0.1:4175. Os módulos precisam de HTTP; não abra o HTML por duplo clique. Não é necessário instalar dependências.
 
-- Identidade em carvão, creme e dourado suave, com títulos editoriais e mais espaço entre seções.
-- Abertura estática com fotografia e prioridade para a reserva.
-- Horários e endereço próximos da abertura.
-- Seleção de sabores com categorias e indicação de fotografias ilustrativas.
-- Formulário com orientação explícita para continuar no WhatsApp.
-- Acesso fixo à reserva e à localização no celular; data e horário em linhas separadas nas telas menores.
-- Foco visível, navegação por teclado, mensagens de validação e respeito à preferência por movimento reduzido.
+## Publicar
 
-## Manutenção
+Envie index.html, style.css, script.js, reservation.mjs e assets para uma hospedagem estática HTTPS. Sirva .mjs como text/javascript. preview.cjs é somente uma prévia local. Google Fonts, Maps e os links de contato dependem de internet.
 
-- `index.html`: conteúdo, horários, endereço e estrutura.
-- `style.css`: identidade visual e regras responsivas.
-- `script.js`: imagens, categorias, navegação e formulário.
-- `favicon.svg`: ícone da página.
-- `preview.cjs`: servidor local opcional; não é necessário na hospedagem estática.
+## Editar
 
-As fotos são ilustrativas, carregadas do Unsplash. As fontes vêm do Google Fonts, e o mapa é incorporado do Google Maps. Esses recursos exigem conexão com a internet.
+- Conteúdo, preço e contatos: index.html.
+- Tipografia, cores, animação e responsividade: style.css.
+- Menu e formulário: script.js.
+- Datas, horários e mensagem: reservation.mjs; manter horários coerentes com o HTML.
+- Imagens reais de comida: assets/sources.json.
+- Imagem provisória de ambiente: assets/ambiente-ilustrativo.webp. Veja as instruções e prompt em assets/ambiente-ilustrativo.md.
 
-O formulário prepara uma solicitação no WhatsApp. Nenhuma reserva é confirmada automaticamente: a equipe do restaurante confirma a disponibilidade. Horários, endereço e telefone foram preservados do projeto fornecido.
+A imagem de ambiente é gerada por IA e identificada como ilustrativa. Não retrata a Rossini. O preço inicial foi informado pelo proprietário; condições variam. Endereço, telefone comercial e horários completos foram preservados do projeto recebido.
 
-Esta versão está em uma pasta separada; os arquivos originais da Área de Trabalho não foram modificados. Para hospedagem estática, publique `index.html`, `style.css`, `script.js` e `favicon.svg` juntos.
+O formulário pede nome, data, horário e pessoas. Prepara a mensagem para o visitante enviar; a reserva só é válida após confirmação da equipe. Não armazena dados nem consulta disponibilidade de mesas.
+
+## Validar
+
+```sh
+node --test tests/reservation.test.mjs
+node --check script.js
+node --check reservation.mjs
+```
+
+O projeto não foi publicado.
