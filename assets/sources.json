@@ -46,7 +46,7 @@
   {
     "file": "sushi-selecao-640.webp",
     "source": "https://www.instagram.com/rossinisteakhouse/p/DdWZdSYHCYp/",
-    "kind": "Publicação oficial da Rossini; sem geração por IA",
+    "kind": "Publicação oficial da Rossini; sem geração por IA; sem uso na página atual",
     "retrieved": "2026-09-20",
     "originalWidth": 3075,
     "originalHeight": 4096,
@@ -57,7 +57,7 @@
   {
     "file": "sushi-selecao-1280.webp",
     "source": "https://www.instagram.com/rossinisteakhouse/p/DdWZdSYHCYp/",
-    "kind": "Publicação oficial da Rossini; sem geração por IA",
+    "kind": "Publicação oficial da Rossini; sem geração por IA; sem uso na página atual",
     "retrieved": "2026-09-20",
     "originalWidth": 3075,
     "originalHeight": 4096,
@@ -90,7 +90,7 @@
   {
     "file": "a-casa-480.webp",
     "source": "https://www.instagram.com/rossinisteakhouse/p/DLDkKDDJHF2/",
-    "kind": "Publicação oficial da Rossini; sem geração por IA",
+    "kind": "Publicação oficial da Rossini (família no Arraial do Ipem, 18/06/2025); sem geração por IA",
     "retrieved": "2026-09-20",
     "originalWidth": 480,
     "originalHeight": 640,
@@ -99,14 +99,86 @@
     "bytes": 51836
   },
   {
-    "file": "marca-150.webp",
-    "source": "https://www.instagram.com/rossinisteakhouse/",
-    "kind": "Publicação oficial da Rossini; sem geração por IA",
-    "retrieved": "2026-09-20",
-    "originalWidth": 150,
-    "originalHeight": 150,
-    "width": 150,
-    "height": 150,
-    "bytes": 2958
+    "file": "salao-letreiro-1600.webp",
+    "source": "https://rossinisteakhouse.com.br/wp-content/uploads/2025/11/rossini-steakhouse.jpg",
+    "kind": "Foto do salão publicada no site oficial (imagem de compartilhamento); parece ampliada por software, mas retrata a casa real",
+    "retrieved": "2026-09-25",
+    "originalWidth": 1600,
+    "originalHeight": 900,
+    "width": 1600,
+    "height": 900,
+    "bytes": 113806
+  },
+  {
+    "file": "salao-letreiro-960.webp",
+    "source": "https://rossinisteakhouse.com.br/wp-content/uploads/2025/11/rossini-steakhouse.jpg",
+    "kind": "Foto do salão publicada no site oficial, redimensionada",
+    "retrieved": "2026-09-25",
+    "originalWidth": 1600,
+    "originalHeight": 900,
+    "width": 960,
+    "height": 540,
+    "bytes": 60724
+  },
+  {
+    "file": "og-rossini.jpg",
+    "source": "https://rossinisteakhouse.com.br/wp-content/uploads/2025/11/rossini-steakhouse.jpg",
+    "kind": "Recorte 1200x630 da foto do salão para pré-visualização em redes sociais",
+    "retrieved": "2026-09-25",
+    "originalWidth": 1600,
+    "originalHeight": 900,
+    "width": 1200,
+    "height": 630,
+    "bytes": 140043
+  },
+  {
+    "file": "logo-rossini-branco.webp",
+    "source": "https://rossinisteakhouse.com.br/wp-content/uploads/2025/11/logo-rossini-steakhouse.jpg",
+    "kind": "Logo oficial (992x992, preto sobre branco) convertido para branco com fundo transparente",
+    "retrieved": "2026-09-25",
+    "originalWidth": 992,
+    "originalHeight": 992,
+    "width": 319,
+    "height": 480,
+    "bytes": 14272
+  },
+  {
+    "file": "logo-rossini-preto.webp",
+    "source": "https://rossinisteakhouse.com.br/wp-content/uploads/2025/11/logo-rossini-steakhouse.jpg",
+    "kind": "Logo oficial em preto com fundo transparente, para fundos claros e dados estruturados",
+    "retrieved": "2026-09-25",
+    "originalWidth": 992,
+    "originalHeight": 992,
+    "width": 319,
+    "height": 480,
+    "bytes": 18024
+  },
+  {
+    "file": "logo-rossini-horizontal-branco.webp",
+    "source": "https://rossinisteakhouse.com.br/wp-content/uploads/2025/11/logo-rossini-steakhouse.jpg",
+    "kind": "Versão horizontal (touro ao lado do nome), como nas artes do Instagram; branca",
+    "retrieved": "2026-09-25",
+    "originalWidth": 992,
+    "originalHeight": 992,
+    "width": 341,
+    "height": 132,
+    "bytes": 7620
+  },
+  {
+    "file": "logo-rossini-horizontal-preto.webp",
+    "source": "https://rossinisteakhouse.com.br/wp-content/uploads/2025/11/logo-rossini-steakhouse.jpg",
+    "kind": "Versão horizontal preta, para fundos claros; sem uso na página atual",
+    "retrieved": "2026-09-25",
+    "originalWidth": 992,
+    "originalHeight": 992,
+    "width": 341,
+    "height": 132,
+    "bytes": 9820
+  },
+  {
+    "file": "favicon-32.png, favicon-192.png, apple-touch-icon.png",
+    "source": "https://rossinisteakhouse.com.br/wp-content/uploads/2025/11/logo-rossini-steakhouse.jpg",
+    "kind": "Touro do logo oficial em branco sobre o preto da página",
+    "retrieved": "2026-09-25"
   }
 ]

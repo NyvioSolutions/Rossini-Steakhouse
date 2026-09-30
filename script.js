@@ -1,9 +1,13 @@
+import { initMotion } from "./motion.js";
 import {
   getRestaurantNow,
   getAvailableTimes,
   validateReservation,
   buildReservationUrl,
 } from "./reservation.mjs";
+
+// Keep in sync with the collapse breakpoint in style.css.
+const DESKTOP_NAV = "(min-width: 1024px)";
 
 function initNavigation() {
   const toggle = document.querySelector(".menu-toggle");
@@ -42,14 +46,35 @@ function initNavigation() {
     )
       close();
   });
-  matchMedia("(min-width: 761px)").addEventListener("change", (event) => {
+  matchMedia(DESKTOP_NAV).addEventListener("change", (event) => {
     if (event.matches) close();
   });
 }
 
+/** Marks the navigation link of the section crossing the middle of the viewport. */
+function initSectionHighlight() {
+  if (!("IntersectionObserver" in window)) return;
+  const links = [...document.querySelectorAll('#navigation a[href^="#"]')];
+  const sections = document.querySelectorAll("main > section[id]");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        links.forEach((link) =>
+          link.getAttribute("href") === `#${entry.target.id}`
+            ? link.setAttribute("aria-current", "true")
+            : link.removeAttribute("aria-current"),
+        );
+      });
+    },
+    { rootMargin: "-45% 0px -50% 0px" },
+  );
+  sections.forEach((section) => observer.observe(section));
+}
+
 function initReservation() {
   const form = document.querySelector("#reservation-form");
-  const fields = [...form.querySelectorAll("input, select")];
+  const fields = [...form.querySelectorAll("input, select, textarea")];
   const date = form.elements.date;
   const time = form.elements.time;
   const result = form.querySelector(".form-result");
@@ -107,7 +132,7 @@ function initReservation() {
     form.querySelector("#reservation-link").href = url;
     result.hidden = false;
     form.querySelector("#form-status").textContent =
-      "Solicitação preparada. Envie a mensagem no WhatsApp e aguarde a confirmação da equipe. Se a janela não abriu, use o link abaixo.";
+      "Solicitação pronta. Envie a mensagem no WhatsApp e aguarde a confirmação da equipe. Se a conversa não abriu, use o link abaixo.";
     window.open(url, "_blank", "noopener,noreferrer");
     setTimeout(() => {
       submitting = false;
@@ -122,5 +147,7 @@ function initReservation() {
 }
 
 initNavigation();
+initSectionHighlight();
 initReservation();
+initMotion();
 document.querySelector("#year").textContent = new Date().getFullYear();

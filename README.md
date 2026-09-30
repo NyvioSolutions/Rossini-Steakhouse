@@ -1,6 +1,6 @@
 # Rossini Steakhouse
 
-Site estático em HTML, CSS e JavaScript. Hero com foto real de cortes e movimento sutil; rodízio a partir de R$ 105; formulário sem telefone.
+Site estático em HTML, CSS e JavaScript, na identidade visual do Instagram e do salão da Rossini: preto, brasa, amarelo-ouro, pedra e aço. Seções: rodízio, valores, nossa história, prêmios, reservas de grupos e localização.
 
 ## Abrir localmente
 
@@ -14,26 +14,26 @@ Abra http://127.0.0.1:4175. Os módulos precisam de HTTP; não abra o HTML por d
 
 ## Publicar
 
-Envie index.html, style.css, script.js, reservation.mjs e assets para uma hospedagem estática HTTPS. Sirva .mjs como text/javascript. preview.cjs é somente uma prévia local. Google Fonts, Maps e os links de contato dependem de internet.
+Envie index.html, style.css, script.js, motion.js, reservation.mjs e a pasta assets para uma hospedagem estática HTTPS. Sirva .mjs como text/javascript. preview.cjs é somente uma prévia local. As tags de compartilhamento (og:image, canonical) apontam para https://rossinisteakhouse.com.br/; ajuste se o domínio for outro. Google Fonts, Maps e os links de contato dependem de internet.
 
 ## Editar
 
-- Conteúdo, preço e contatos: index.html.
-- Tipografia, cores, animação e responsividade: style.css.
-- Menu e formulário: script.js.
-- Datas, horários e mensagem: reservation.mjs; manter horários coerentes com o HTML.
-- Imagens reais de comida: assets/sources.json.
-- Imagem provisória de ambiente: assets/ambiente-ilustrativo.webp. Veja as instruções e prompt em assets/ambiente-ilustrativo.md.
+- Conteúdo, valores, horários, história e prêmios: index.html. Os valores seguem o destaque "Valores" do Instagram; ao mudar, atualize também a frase com a data da tabela.
+- Prêmios e notas: seção `#premios`, com a data de consulta no texto.
+- Horários: faixa de horários, seção `#localizacao`, rodapé e o JSON-LD no `<head>`; as regras de reserva ficam em reservation.mjs.
+- Regras de reserva (número do WhatsApp, grupo mínimo, dias e feriados): constantes no topo de reservation.mjs. Mantenha a lista de pessoas do formulário coerente com `MIN_PARTY_SIZE`.
+- Tipografia, cores e responsividade: tokens no início de style.css.
+- Menu, destaque da seção atual e formulário: script.js. Entrada e revelação das fotos: motion.js.
+- Origem de cada imagem: assets/sources.json.
 
-A imagem de ambiente é gerada por IA e identificada como ilustrativa. Não retrata a Rossini. O preço inicial foi informado pelo proprietário; condições variam. Endereço, telefone comercial e horários completos foram preservados do projeto recebido.
-
-O formulário pede nome, data, horário e pessoas. Prepara a mensagem para o visitante enviar; a reserva só é válida após confirmação da equipe. Não armazena dados nem consulta disponibilidade de mesas.
+O formulário pede nome, data, horário, pessoas e observações. Prepara a mensagem no modelo da própria casa para o visitante enviar no WhatsApp de reservas; a reserva só vale após confirmação da equipe. Não armazena dados.
 
 ## Validar
 
 ```sh
 node --test tests/reservation.test.mjs
 node --check script.js
+node --check motion.js
 node --check reservation.mjs
 ```
 
